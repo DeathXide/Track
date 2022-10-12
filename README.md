@@ -12,10 +12,7 @@ As image processing is involved, the model is using convolutional layers for aut
 
 - `model.py` The script used to create and train the model.
 - `drive.py` The script to drive the car. You can feel free to resubmit the original `drive.py` or make modifications and submit your modified version.
-- `utils.py` The script to provide useful functionalities (i.e. image preprocessing and augumentation)
 - `model.h5` The model weights.
-- `environments.yml` conda environment (Use TensorFlow without GPU)
-- `environments-gpu.yml` conda environment (Use TensorFlow with GPU)
 
 Note: drive.py is originally from [the Udacity Behavioral Cloning project GitHub](https://github.com/udacity/CarND-Behavioral-Cloning-P3) but it has been modified to control the throttle.
 
@@ -24,14 +21,6 @@ Note: drive.py is originally from [the Udacity Behavioral Cloning project GitHub
 ### Install required python libraries:
 
 You need an [anaconda](https://www.continuum.io/downloads) or [miniconda](https://conda.io/miniconda.html) to use the environment setting.
-
-```python
-# Use TensorFlow without GPU
-conda env create -f environment.yml 
-
-# Use TensorFlow with GPU
-conda env create -f environment-gpu.yml
-```
 
 Or you can manually install the required libraries (see the contents of the environment*.yml files) using pip.
 
@@ -125,31 +114,6 @@ For training, I used the following augumentation technique along with Python gen
 - Randomly altering image brightness (lighter or darker)
 
 Using the left/right images is useful to train the recovery driving scenario.  The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).
-
-
-### Examples of Augmented Images
-
-The following is the example transformations:
-
-**Center Image**
-
-![Center Image](images/center.png)
-
-**Left Image**
-
-![Left Image](images/left.png)
-
-**Right Image**
-
-![Right Image](images/right.png)
-
-**Flipped Image**
-
-![Flipped Image](images/flip.png)
-
-**Translated Image**
-
-![Translated Image](images/trans.png)
 
 
 ## Training, Validation and Test
